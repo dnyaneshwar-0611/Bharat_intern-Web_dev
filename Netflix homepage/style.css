@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    font-size: 16px;
+}
+body{
+    background: black;
+    color: white;
+}
+.header{
+    height: 99vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/header-image.png);
+    background-size: cover;
+    mask-repeat: no-repeat;
+}
+.nav {
+    width: 80%;
+    padding-top: 2%;
+    margin:0% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav .logo img{
+    width: 65%;
+}
+.btn button{
+    width: 80px;
+    align-content: center;
+}
+.btn img{
+    width: 13px;
+}
+.btn .lang{
+    width: 110px;
+    height: 40px;
+    padding: 3px 10px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+}
+.btn #signin{
+    margin-left: 25px;
+    height: 40px;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+.btn #signin:hover{
+    cursor: pointer;
+    background: rgb(230, 60, 60);
+}
+.content{
+    width: 80%;
+    margin: 0 10%;
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.content h1{
+    margin: 10px 0;
+    color: white;
+    font-size: 55px;
+    font-weight: 700;
+}
+.content h2{
+    font-weight: 500;
+    margin: 16px 0;
+    color: white;
+    font-size: 24px;
+}
+.content h3{
+    font-weight: 500;
+    margin: 10px 0;
+    color: white;
+    font-size: 21px;
+}
+
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.details input{
+    background: transparent;
+    color: white;
+    border: 0.1px solid white;
+    width: 25vw;
+    margin-top: 10px;
+    padding: 15px 15px;
+    border-radius: 3px;
+}
+.details button{
+    background: red;
+    border-radius: 5px;
+    width: 12vw;
+    margin-top: 10px;
+    margin-left: 15px;
+    padding: 13px 3px;
+    font-size: 22px;
+    border: none;
+    color: white;
+}
+.details button:hover{
+    cursor: pointer;
+    background: rgb(230, 60, 60);
+}
+hr#full_width_hr{
+    width: 100%;
+    margin-top: 12%;
+    border: 4px solid #303030;
+}
+
+.features{
+    margin: 3% 10%;
+    width: 100%;
+    height: 300vh;
+    
+}
+.features img{
+    width: 600px;
+}
+.feature1{
+    width: 80%;
+    height: 50vh;
+    margin-top: 10% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.feature2{
+    margin-top: 10% ;
+    height: 40vh;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.feature3{
+    margin-top: 10% ;
+    height: 40vh;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.feature4{
+    margin-top: 10% ;
+    height: 40vh;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.features h1{
+    margin: 10px 0;
+    padding-bottom: 15px ;
+    color: white;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.features h3{
+    font-weight: 500;
+    margin: 10px 0;
+    color: white;
+    font-size: 24px;
+}
+
+.features hr{
+    width: 80%;
+    margin-top: 11%;
+    border: 4px solid #303030;
+}
+
+.faq{
+    padding: 8% 0 20px;
+    text-align: center;
+    
+}
+
+.faq h1{
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    width: 100%;
+    margin: 0 0%;
+    color: white;  
+    background: #303030;
+    text-align: left;
+    padding:  0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+   
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.bottom_content .text h3{
+    font-size: 20px;
+    padding-bottom: 10px;
+    width: 80%;
+    margin: 0 28%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.bottom_submission{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1vh;
+}
+.bottom_content .bottom_submission input{
+    background: transparent;
+    color: white;
+    border: 0.1px solid white;
+    width: 25vw;
+    margin-top: 10px;
+    padding: 15px 15px;
+    border-radius: 3px;
+}
+.bottom_content .bottom_submission button{
+    background: red;
+    border-radius: 5px;
+    width: 12vw;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 15px;
+    padding: 13px 3px;
+    font-size: 18px;
+    border: none;
+    color: white;
+}
+.footer p{
+    margin: 4% 10%;
+}
+.footer .helps{
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.footer a{
+    text-decoration: underline;
+    color: white;
+}
+.footer .helps ul li{
+    list-style: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 7px 0;
+}
+.btn #footer_btn1{
+    cursor: pointer;
+    margin-top: 1%;
+    margin-left: 10%;
+}
+
+/*  */
+
+@media only screen and (max-width:600px){
+    .nav .logo img{
+        width: 80px;
+    }
+    .nav .btn{
+        display: flex;
+        align-items: end;
+        justify-content: flex-end;
+    }
+    .nav .btn .lang{
+        width: 80px;
+        font-size: 13px;
+    }
+    .nav .btn .lang img{
+        width: 9px;
+        padding: 0;
+    }
+    .header {
+        max-height: 455px;
+    }
+    .content h1{
+        font-size: 30px;
+    }
+    .content h2{
+        font-size: 25px;
+        
+    }
+    .content h3{
+        font-size: 20px;
+        
+    }
+    .details input{
+        margin: 0;
+        width: 120px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .details button{
+        margin: 4px;
+        padding: 0;
+        width: 100px;
+        height: 32px;
+        font-size: 14px;
+    }
+    .features{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .features h1{
+        font-size: 27px;
+        display: flex;
+        flex-direction: row;
+    }
+    hr{
+        visibility: hidden;
+    }
+    .features h3{
+        font-size: 20px;
+    }
+    .feature1, .feature2, .feature3 ,.feature4{
+        display: flex;
+        flex-direction: row;
+    }
+    .feat_img img{
+        flex-basis: 100%;
+        width: 220px;
+    }
+    .feature2 , .feature4{
+        flex-direction: column-reverse;
+    }
+    .faq h1{
+        font-size: 30px;
+    }
+    .bottom_content .text h3{
+        font-size: 18px;
+        padding: 0;
+        margin-left: 40px;
+    }
+    .bottom_submission input{
+        margin: 0;
+        width: 120px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .bottom_submission #bottom_submission{
+        font-size: 14px;
+        width: 110px;
+        height: 32px;
+        padding: 0;
+    }
+    .helps ul li{
+        font-size: 10px;
+    }
+    .footer .btn button{
+        width: 110px;
+        font-size: 14px;
+        height: 32px;
+    }
+    #copy_right{
+        margin-top: 20px;
+    }
+
+}
